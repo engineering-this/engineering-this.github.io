@@ -1,0 +1,159 @@
+// disable scrolling on whole page
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100vh;
+  overflow: hidden;
+  font-family: $base-font;
+  font-size: 100%;
+  font-weight: 300;
+}
+
+// set body background as gradient with fixed position
+body {
+  @include gradient-three-colors(top, $color-hazel-alpha, $color-hazel-beta, $color-hazel-gamma);
+  background-attachment: fixed;
+}
+
+.page-wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+
+@each $item in $cube-sides {
+  ##{$item}:target ~ .nav .nav__item--#{$item} {
+  background-color: black-opacity(0.65);
+  }
+
+}
+
+// hiding divs that carry ids for :target pseudoclass
+@each $item in $cube-sides {
+  ##{$cube-sides} {
+    display: none;
+    visibility: hidden;
+    position: absolute;
+  }
+}
+
+.container {
+  margin: 5vmin;
+  width: $cube-width;
+  height: $cube-height;
+  //position: relative;
+  perspective: $perspective;
+}
+
+.cube {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: transform $cube__transition-time+s;
+  transform: translateZ( -$cube-dimension/2 );
+}
+
+.cube__side  {
+  margin: 0;
+  width: $cube-width;
+  height: $cube-height;
+  display: block;
+  position: absolute;
+  //@include background-color($cube-background);
+  //border: 3px solid black;
+}
+
+.cube__side-div {
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.text-container {
+}
+
+.list{
+  margin-top: 2vmin;
+}
+
+.list__item{
+  margin-top: 2vmin;
+}
+
+.list__link{
+  font-size: $list__font-size;
+  color: black;
+  text-decoration: none;
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);
+
+}
+
+.list__link:hover{
+  color: #000044;
+}
+
+.cube__front  {
+  @include cube (X, 0deg, Z, $cube-dimension/2);
+  @include background-color($cube-color-front);
+}
+
+.cube__back   {
+  @include cube (X, 180deg, Z, $cube-dimension/2);
+  @include background-color($cube-color-back);
+}
+
+.cube__right  {
+  @include cube (Y, 90deg, Z, $cube-dimension/2);
+  @include background-color($cube-color-right);
+}
+
+.cube__left   {
+  @include cube (Y, -90deg, Z, $cube-dimension/2);
+  @include background-color($cube-color-left);
+}
+
+.cube__top    {
+  @include cube (X, 90deg, Z, $cube-dimension/2);
+  @include background-color($cube-color-top);
+}
+
+.cube__bottom {
+  @include cube (X, -90deg, Z, $cube-dimension/2);
+  @include background-color($cube-color-bottom);
+}
+
+#front:target ~ .container .cube { @include cube-t(Y, 0deg, Z, -$cube-dimension/2);}
+#back:target ~ .container .cube { @include cube-t(X, -180deg, Z, -$cube-dimension/2);}
+#top:target ~ .container .cube { @include cube-t(X, -90deg, Z, -$cube-dimension/2);}
+#bottom:target ~ .container .cube { @include cube-t(X, 90deg, Z, -$cube-dimension/2);}
+#left:target ~ .container .cube { @include cube-t(Y, 90deg, Z, -$cube-dimension/2);}
+#right:target ~ .container .cube { @include cube-t(Y, -90deg, Z, -$cube-dimension/2);}
+
+
+
+@each $item in $cube-sides {
+  .cube__#{$item}--opacity {
+    opacity: 0;
+    transition: opacity $cube__transition-time/2+s ease-in-out;
+    //width: 50%;
+    //height: 50%;
+    //margin: auto;
+  }
+
+  ##{$item}:target ~ .container .cube__#{$item}--opacity {
+    opacity: 1;
+  }
+}

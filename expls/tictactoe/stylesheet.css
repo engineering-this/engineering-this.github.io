@@ -1,0 +1,55 @@
+html {
+    padding: 50px;
+}
+
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td, td {
+    border: 1px solid black;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    font-size: 108px;
+    font-family: Tahoma, serif;
+}
+
+
+td:hover {
+    background: rgb(130, 220, 200);
+}
+
+#menu {
+    margin-top: 50px;
+    width: 450px;
+    height: 150px;
+}
+
+#menu div {
+    display: inline-block;
+    float: left;
+    margin: 0;
+    padding-top: 40px;
+    font-size: 24px;
+    font-family: Tahoma, serif;
+    border: 1px black solid;
+    width: 33.33%;
+    width: calc(100% / 3);
+    height: 100%;
+    line-height: 100%;
+    text-align: center;
+}
+
+#menu div:hover {
+    background: rgb(130, 220, 200);
+}

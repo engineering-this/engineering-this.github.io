@@ -1,0 +1,43 @@
+// fonts
+
+$base-font: Roboto, sans-serif, serif;
+$secondary-font: "Calibri", sans-serif, serif;
+
+// gradient background "Hazel"
+
+$color-hazel-alpha: #E684AE;
+$color-hazel-beta: #79CBCA;
+$color-hazel-gamma: #77A1D3;
+
+// background for cube
+
+$cube-background: rgba(77, 160, 176, 0.2);
+
+
+// cube colors
+
+$cube-color-front: rgba(56, 65, 74, 0.15);
+$cube-color-top: rgba(56, 65, 74, 0.25);
+$cube-color-back: rgba(56, 65, 74, 0.35);
+$cube-color-left: rgba(56, 65, 74, 0.45);
+$cube-color-right: rgba(56, 65, 74, 0.55);
+$cube-color-bottom: rgba(56, 65, 74, 0.65);
+
+// cube dimensions
+
+$cube-dimension: 80vmin;
+$cube-width: $cube-dimension;
+$cube-height: $cube-dimension;
+
+// cube helpers
+
+
+$cube-sides: "front" "top" "back" "bottom" "left" "right";
+
+// 3d
+
+$perspective : 600px;
+
+// cube animations
+
+$cube__transition-time: 0.65;

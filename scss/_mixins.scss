@@ -1,0 +1,29 @@
+// gradient background 3 colors
+
+@mixin gradient-two-colors($orientation, $color1, $color2) {
+  background: $color1;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to $orientation, $color1, $color2);  /* Chrome 10-25, Safari 5.1-6 */
+  background: -moz-linear-gradient(to $orientation, $color1, $color2);
+  background: linear-gradient(to $orientation, $color1, $color2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+@mixin gradient-three-colors($orientation, $color1, $color2, $color3){
+  background: $color1;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to $orientation, $color1, $color2, $color3);  /* Chrome 10-25, Safari 5.1-6 */
+  background: -moz-linear-gradient(to $orientation, $color1, $color2, $color3);
+  background: linear-gradient(to $orientation, $color1, $color2, $color3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+// cube face rotate and translate
+@mixin cube($raxis, $angle, $axis, $translation){
+  transform: rotate + $raxis + '(' + $angle + ')' + translate + $axis + '(' + $translation + ')' ;
+}
+
+@mixin cube-t($raxis, $angle, $axis, $translation){
+  transform: translate+$axis + '(' + $translation + ')' + rotate + $raxis + '(' + $angle + ')' ;
+}
+
+
+@mixin background-color($color){
+  background-color: $color;
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="robost" content="noindex, nofollow "/>
+    <title>Minimalizm</title>
+    <link type="text/css" rel="stylesheet" href="stylesheet.css">
+    <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
+</head>
+<body>
+
+<div class="page-wrapper">
+
+    <!-- Empty and hidden divs to make :target psuedoclass work -->
+    <div id="front"></div>
+    <div id="back"></div>
+    <div id="right"></div>
+    <div id="left"></div>
+    <div id="top"></div>
+    <div id="bottom"></div>
+
+    <!-- Navigation menu below -->
+    <nav class="nav">
+        <a class="nav__item nav__item--front" href="#front">front</a>
+        <a class="nav__item nav__item--back" href="#back">back</a>
+        <a class="nav__item nav__item--right" href="#right">right</a>
+        <a class="nav__item nav__item--top" href="#top">top</a>
+        <a class="nav__item nav__item--left" href="#left">left</a>
+        <a class="nav__item nav__item--bottom" href="#bottom">bottom</a>
+    </nav>
+
+     <!--Actual content of page -->
+    <section class="container">
+        <div class="cube">
+            <figure class="cube__side cube__front">
+                <div class="cube__side-div cube__front--opacity">
+                    <div class="text_container">
+                        <h1>Zakręć kostką</h1>
+                        <p>Zalecam przeglądać stronę w&nbsp;najnowszej wersji przeglądarki Mozilla Firefox. Niestety konkurencja pozostaje w&nbsp;tyle pod względem łatania bugów.</p>
+                    </div>
+                </div>
+            </figure>
+            <figure class="cube__side cube__back">
+                <div class="cube__side-div cube__back--opacity">
+                    <div class="text_container">
+                        <h2>FrontEnd</h2>
+                        <p>Jestem inżynierem w&nbsp;branży budowlanej, jednak nie&nbsp;spełniam&nbsp;się w&nbsp;zawodzie. Chcę robić coś bardziej twórczego i&nbsp;lepiej wykorzystywać swój potencjał. Odpowiedzią na&nbsp;moją potrzebę jest front end. Od&nbsp;paru miesięcy wolne chwile staram&nbsp;się spędzać na&nbsp;nauce. Oto moja strona demonstracyjna.</p>
+
+                </div>
+            </figure>
+            <figure class="cube__side cube__right">
+                <div class="cube__side-div cube__right--opacity">
+                    <div class="text_container">
+                        <h2>CSS3</h2>
+                        <p>Naukę skupiam wokół czystego CCS oraz Sass. Na&nbsp;razie nie&nbsp;poświęcam uwagi frameworkom. Korzystanie z&nbsp;gotowych rozwiązań w&nbsp;pracy jest jak najbardziej pożądane, jednak na&nbsp;etapie nauki wolę poznawać mechanizmy, a&nbsp;nie&nbsp;gotowce. W&nbsp;przyszłości chętnie poznam takie narzędzia jak Bootstrap czy Compass.</p>
+                    </div>
+            </figure>
+            <figure class="cube__side cube__top">
+                <div class="cube__side-div cube__top--opacity">
+                    <div class="text_container">
+                        <h2>JavaScript</h2>
+                        <p>Najbardziej staram się rozwijać pod kątem Vanilla&nbsp;JS, a&nbsp;poznawanie frameworków zostawiam sobie na&nbsp;później. Wyjątkiem jest Processing&nbsp;JS. W&nbsp;którymś momencie nauki chcąc spróbować czegoś innego trafiłem na&nbsp;canvas i&nbsp;Processing&nbsp;JS. </p>
+                    </div>
+                </div>
+            </figure>
+            <figure class="cube__side cube__left">
+                <div class="cube__side-div cube__left--opacity">
+                    <div class="text_container">
+                        <h3>Przykłady</h3>
+                        <ul class="list">
+                            <li class="list__item"><a class="list__link" href="expls/ark/ark.html">Akranoid <p> prosta gra napisana w&nbsp;JavaScripcie z&nbsp;wykorzystaniem biblioteki Processing&nbsp;JS</p></a></li>
+                            <li class="list__item"><a class="list__link" href="expls/balls/balls.html">Piłeczki <p> fizyka kolizji piłek&nbsp;2d również z&nbsp;wykorzystaniem biblioteki Processing&nbsp;JS</p></a></li>
+                            <li class="list__item"><a class="list__link" href="expls/tictactoe/index.html">TicTacToe <p> gra kółko&nbsp;i&nbsp;krzyżyk napisana w&nbsp;czystym JavaScripcie</p></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </figure>
+            <figure class="cube__side cube__bottom">
+                <div class="cube__side-div cube__bottom--opacity">
+                    <div class="text_container">
+                        <h2>Kontakt</h2>
+                        <p>kajetanl[at]gmail.com</p>
+                    </div>
+                </div>
+            </figure>
+        </div>
+    </section>
+
+</div>
+
+
+<script src='main.js'></script>
+
+</body>
+</html>
