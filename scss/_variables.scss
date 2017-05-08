@@ -1,7 +1,10 @@
 // fonts
 
-$base-font: 'Ubuntu Mono', monospace;;
+$base-font: 'Ubuntu Mono', monospace;
 $secondary-font: "Calibri", sans-serif, serif;
+$nav__font-size: 3.2vmin;
+$list__font-size: 2.8vmin;
+$base__font--color: #D8D8D8;
 
 // gradient background "Hazel"
 
@@ -31,7 +34,6 @@ $cube-height: $cube-dimension;
 
 // cube helpers
 
-
 $cube-sides: "front" "top" "back" "bottom" "left" "right";
 
 // 3d
@@ -41,3 +43,4 @@ $perspective : 600px;
 // cube animations
 
 $cube__transition-time: 0.65;
+

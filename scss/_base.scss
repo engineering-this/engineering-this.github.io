@@ -68,16 +68,21 @@ body {
 }
 
 .cube__side-div {
-  padding: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 5vmin;
+  //display: flex;
+  //justify-content: center;
+  //align-items: center;
   width: 100%;
   height: 100%;
   margin: 0;
 }
 
 .text-container {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .list{
@@ -91,24 +96,30 @@ body {
 
 .list__link{
   font-size: $list__font-size;
-  color: black;
+  color: $base__font--color;
   text-decoration: none;
   text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);
 }
 
-.list__link:after {
-  content:"{"
+.list__link:hover p {
+  color: #A5C25C;
+}
+
+.list__link:hover p:after{
+  color: $base__font--color;
 }
 
 .list__item--last:after {
   content:"}";
   font-size: $list__font-size;
   margin-left: -2.8vmin;
+  color: $base__font--color;
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);
 }
 
 
 .list__link:hover{
-  color: #000044;
+  color: $base__font--color;
 }
 
 .cube__front  {
