@@ -2,11 +2,12 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0' name='viewport' />
     <meta name="robost" content="noindex, nofollow "/>
     <title>Minimalizm</title>
     <link type="text/css" rel="stylesheet" href="stylesheet.css">
-    <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
+    <link rel='shortcut icon' type='image/x-icon' href='favicon.ico'>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet">
 </head>
 <body>
 
@@ -22,12 +23,12 @@
 
     <!-- Navigation menu below -->
     <nav class="nav">
-        <a class="nav__item nav__item--front" href="#front">front</a>
-        <a class="nav__item nav__item--back" href="#back">back</a>
-        <a class="nav__item nav__item--right" href="#right">right</a>
-        <a class="nav__item nav__item--top" href="#top">top</a>
-        <a class="nav__item nav__item--left" href="#left">left</a>
-        <a class="nav__item nav__item--bottom" href="#bottom">bottom</a>
+        <a class="nav__item nav__item--front" href="#front"><span class="nav__item-span">front</span></a>
+        <a class="nav__item nav__item--back" href="#back"><span class="nav__item-span">back</span></a>
+        <a class="nav__item nav__item--right" href="#right"><span class="nav__item-span">right</span></a>
+        <a class="nav__item nav__item--top" href="#top"><span class="nav__item-span">top</span></a>
+        <a class="nav__item nav__item--left" href="#left"><span class="nav__item-span">left</span></a>
+        <a class="nav__item nav__item--bottom" href="#bottom"><span class="nav__item-span">bottom</span></a>
     </nav>
 
      <!--Actual content of page -->
@@ -44,7 +45,7 @@
             <figure class="cube__side cube__back">
                 <div class="cube__side-div cube__back--opacity">
                     <div class="text_container">
-                        <h2>FrontEnd</h2>
+                        <h1>FrontEnd</h1>
                         <p>Jestem inżynierem w&nbsp;branży budowlanej, jednak nie&nbsp;spełniam&nbsp;się w&nbsp;zawodzie. Chcę robić coś bardziej twórczego i&nbsp;lepiej wykorzystywać swój potencjał. Odpowiedzią na&nbsp;moją potrzebę jest front end. Od&nbsp;paru miesięcy wolne chwile staram&nbsp;się spędzać na&nbsp;nauce. Oto moja strona demonstracyjna.</p>
                     </div>
                 </div>
@@ -52,27 +53,27 @@
             <figure class="cube__side cube__right">
                 <div class="cube__side-div cube__right--opacity">
                     <div class="text_container">
-                        <h2>CSS3</h2>
-                        <p>Naukę skupiam wokół czystego CCS oraz Sass. Na&nbsp;razie nie&nbsp;poświęcam uwagi frameworkom. Korzystanie z&nbsp;gotowych rozwiązań w&nbsp;pracy jest jak najbardziej pożądane, jednak na&nbsp;etapie nauki wolę poznawać mechanizmy, a&nbsp;nie&nbsp;gotowce. W&nbsp;przyszłości chętnie poznam takie narzędzia jak Bootstrap czy Compass.</p>
+                        <h1>JavaScript</h1>
+                        <p>Najbardziej staram się rozwijać pod kątem Vanilla&nbsp;JS, a&nbsp;poznawanie frameworków zostawiam sobie na&nbsp;później. Wyjątkiem jest Processing&nbsp;JS. W&nbsp;którymś momencie nauki chcąc spróbować czegoś innego trafiłem na&nbsp;canvas i&nbsp;Processing&nbsp;JS. </p>
                     </div>
                 </div>
             </figure>
             <figure class="cube__side cube__top">
                 <div class="cube__side-div cube__top--opacity">
                     <div class="text_container">
-                        <h2>JavaScript</h2>
-                        <p>Najbardziej staram się rozwijać pod kątem Vanilla&nbsp;JS, a&nbsp;poznawanie frameworków zostawiam sobie na&nbsp;później. Wyjątkiem jest Processing&nbsp;JS. W&nbsp;którymś momencie nauki chcąc spróbować czegoś innego trafiłem na&nbsp;canvas i&nbsp;Processing&nbsp;JS. </p>
+                        <h1>CSS3</h1>
+                        <p>Naukę skupiam wokół czystego CCS oraz Sass. Na&nbsp;razie nie&nbsp;poświęcam uwagi frameworkom. Korzystanie z&nbsp;gotowych rozwiązań w&nbsp;pracy jest jak najbardziej pożądane, jednak na&nbsp;etapie nauki wolę poznawać mechanizmy, a&nbsp;nie&nbsp;gotowce. W&nbsp;przyszłości chętnie poznam takie narzędzia jak Bootstrap czy Compass.</p>
                     </div>
                 </div>
             </figure>
             <figure class="cube__side cube__left">
                 <div class="cube__side-div cube__left--opacity">
                     <div class="text_container">
-                        <h3>Przykłady</h3>
+                        <h1>Przykłady</h1>
                         <ul class="list">
-                            <li class="list__item"><a class="list__link" href="expls/ark/ark.html">Akranoid <p> prosta gra napisana w&nbsp;JavaScripcie z&nbsp;wykorzystaniem biblioteki Processing&nbsp;JS</p></a></li>
-                            <li class="list__item"><a class="list__link" href="expls/balls/balls.html">Piłeczki <p> fizyka kolizji piłek&nbsp;2d również z&nbsp;wykorzystaniem biblioteki Processing&nbsp;JS</p></a></li>
-                            <li class="list__item"><a class="list__link" href="expls/tictactoe/index.html">TicTacToe <p> gra kółko&nbsp;i&nbsp;krzyżyk napisana w&nbsp;czystym JavaScripcie</p></a></li>
+                            <li class="list__item"><a class="list__link" href="expls/ark/ark.html">Akranoid </a><p> prosta gra napisana w&nbsp;JavaScripcie z&nbsp;wykorzystaniem biblioteki Processing&nbsp;JS</p></li>
+                            <li class="list__item"><a class="list__link" href="expls/balls/balls.html">Piłeczki </a><p> fizyka kolizji piłek&nbsp;2d również z&nbsp;wykorzystaniem biblioteki Processing&nbsp;JS</p></li>
+                            <li class="list__item  list__item--last"><a class="list__link" href="expls/tictactoe/index.html">TicTacToe </a><p> gra kółko&nbsp;i&nbsp;krzyżyk napisana w&nbsp;czystym JavaScripcie</p></li>
                         </ul>
                     </div>
                 </div>
@@ -80,7 +81,7 @@
             <figure class="cube__side cube__bottom">
                 <div class="cube__side-div cube__bottom--opacity">
                     <div class="text_container">
-                        <h2>Kontakt</h2>
+                        <h1>Kontakt</h1>
                         <p>kajetanl[at]gmail.com</p>
                     </div>
                 </div>

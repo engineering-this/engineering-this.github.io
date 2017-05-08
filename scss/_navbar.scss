@@ -12,9 +12,9 @@
 
 // styling nav buttons with transparent text
 .nav__item {
-  mix-blend-mode: multiply;
-  overflow: hidden;
-  color: white;
+  position: relative;
+  display: inline-block;
+  color: black;
   background-color: black-opacity(0.25);
   padding: 10px;
   text-align: center;
@@ -22,45 +22,49 @@
   //text-transform: uppercase;
   text-decoration: none;
   font-size: $nav__font-size;
-  line-height: 1.4;
   font-family: $base-font;
-  position: relative;
+  line-height: 1.4;
+  overflow: hidden;
+  @supports(mix-blend-mode: multiply){
+    mix-blend-mode: multiply;
+    color: white;
+  }
+
 }
 
 .nav__item--front {
   border-top-left-radius: 50px;
 }
 
-.nav__item:before {
+.nav__item-span:before {
   content: ".";
 }
 
-.nav__item:after {
+.nav__item-span {
+  display: block;
+  position: relative;
+}
+
+
+.nav__item:before {
   content: "";
   position: absolute;
   top: 0;
-  left: -75%;
-  width: 50%;
+  right: 0;
+  width: 0;
   height: 100%;
-  opacity: 0;
-  background: white-opacity(0.83);
-  background: linear-gradient(
-                  to right,
-                  white-opacity(0.03) 0%,
-                  white-opacity(0.13) 33%,
-                  white-opacity(1) 82%,
-                  white-opacity(0) 100%
-  );
+  background: black-opacity(0.65);
+  transition: width .6s ease;
 }
 
-.nav__item:hover:after {
-  opacity: 1;
-  left: 100%;
-  transition-property: left, opacity;
-  transition-duration: .6s, 0.01s;
-  transition-timing-function: ease;
+.nav__item:hover:before {
+  width: 50%;
 }
 
-.nav__item:active {
-  background-color: black-opacity(0.65);
+@each $item in $cube-sides {
+  ##{$item}:target ~ .nav .nav__item--#{$item}:before {
+    width: 100%;
+    transition: width .6s ease;
+  }
+
 }
