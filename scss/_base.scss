@@ -101,8 +101,13 @@ body {
   text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);
 }
 
+.list__link p {
+  transition: all 0.5s ease-out;
+}
+
 .list__link:hover p {
   color: #A5C25C;
+
 }
 
 .list__link:hover p:after{
@@ -119,7 +124,6 @@ body {
 
 
 .list__link:hover{
-  color: $base__font--color;
 }
 
 .cube__front  {

@@ -79,7 +79,8 @@ p {
 p:after {
   display: block;
   margin-left: -2.8vmin;
-  content: "}"; }
+  content: "}";
+  color: #D8D8D8; }
 
 * {
   -moz-box-sizing: border-box;
@@ -185,6 +186,9 @@ body {
   text-decoration: none;
   text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25); }
 
+.list__link p {
+  transition: all 0.5s ease-out; }
+
 .list__link:hover p {
   color: #A5C25C; }
 
@@ -197,9 +201,6 @@ body {
   margin-left: -2.8vmin;
   color: #D8D8D8;
   text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25); }
-
-.list__link:hover {
-  color: #D8D8D8; }
 
 .cube__front {
   transform: rotateX(0deg)translateZ(40vmin);
