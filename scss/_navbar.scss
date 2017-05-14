@@ -40,6 +40,14 @@
   content: ".";
 }
 
+.nav__item-span--lang:before {
+  content: "";
+}
+
+.nav__item {
+  cursor: pointer;
+}
+
 .nav__item-span {
   display: block;
   position: relative;
@@ -61,10 +69,34 @@
   width: 50%;
 }
 
+.nav__item--lang-pl:before {
+  right: 50%;
+  width: 100%;
+  transform: skew(-15deg);
+  transition: all .6s ease;
+}
+
+.nav__item--lang-en:before {
+  right: -50%;
+  width: 100%;
+  transform: skew(-15deg);
+  transition: all .6s ease;
+}
+
+.nav__item--lang-en:hover:before {
+  width: 100%;
+  right: -50%;
+}
+
+.nav__item--lang-pl:hover:before {
+  width: 100%;
+  right: 50%;
+}
+
 @each $item in $cube-sides {
   ##{$item}:target ~ .nav .nav__item--#{$item}:before {
     width: 100%;
     transition: width .6s ease;
   }
-
 }
+

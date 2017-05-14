@@ -318,6 +318,12 @@ body {
 .nav__item-span:before {
   content: "."; }
 
+.nav__item-span--lang:before {
+  content: ""; }
+
+.nav__item {
+  cursor: pointer; }
+
 .nav__item-span {
   display: block;
   position: relative; }
@@ -334,6 +340,26 @@ body {
 
 .nav__item:hover:before {
   width: 50%; }
+
+.nav__item--lang-pl:before {
+  right: 50%;
+  width: 100%;
+  transform: skew(-15deg);
+  transition: all .6s ease; }
+
+.nav__item--lang-en:before {
+  right: -50%;
+  width: 100%;
+  transform: skew(-15deg);
+  transition: all .6s ease; }
+
+.nav__item--lang-en:hover:before {
+  width: 100%;
+  right: -50%; }
+
+.nav__item--lang-pl:hover:before {
+  width: 100%;
+  right: 50%; }
 
 #front:target ~ .nav .nav__item--front:before {
   width: 100%;
