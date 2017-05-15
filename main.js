@@ -29,7 +29,7 @@
     var langPl = JSON.parse(langpl);
 
     var switchLangInAdr = function (lang){
-        window.history.pushState("", "", `?lang=${lang}#front`)
+        window.history.pushState("", "", `?lang=${lang}${document.location.hash}`)
     };
 
     var currentLang = getQueryVariable('lang');
