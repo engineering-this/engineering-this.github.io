@@ -33,7 +33,7 @@ body {
 
 // hiding divs that carry ids for :target pseudoclass
 @each $item in $cube-sides {
-  ##{$cube-sides} {
+  ##{$item} {
     display: none;
     visibility: hidden;
     position: absolute;

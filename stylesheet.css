@@ -112,32 +112,32 @@ body {
   justify-content: center;
   align-items: center; }
 
-#front top back bottom left right {
+#front {
   display: none;
   visibility: hidden;
   position: absolute; }
 
-#front top back bottom left right {
+#top {
   display: none;
   visibility: hidden;
   position: absolute; }
 
-#front top back bottom left right {
+#back {
   display: none;
   visibility: hidden;
   position: absolute; }
 
-#front top back bottom left right {
+#bottom {
   display: none;
   visibility: hidden;
   position: absolute; }
 
-#front top back bottom left right {
+#left {
   display: none;
   visibility: hidden;
   position: absolute; }
 
-#front top back bottom left right {
+#right {
   display: none;
   visibility: hidden;
   position: absolute; }
