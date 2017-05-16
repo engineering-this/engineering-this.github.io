@@ -39,7 +39,7 @@ let Game = function () {
         // check if three elements are the same
 
         function checkLine (obj){
-            if (el1 !== null && el1 === el2 & el1 === el3){
+            if (el1 !== null && el1 === el2 && el1 === el3){
                 if (el1 === playerX.symbol){
                     return obj.gameEnd(playerX)
                 } else {
@@ -118,7 +118,7 @@ const playerOBanner = document.querySelector("div.playerO");
 let playerBanner = function (e, player) {
     let name = prompt("Przedstaw się!");
     let symbol = prompt("Jaki jest twój znacznik?");
-    e.currentTarget.innerHTML = `<p>${name}</p><p>${symbol}</p>`
+    e.currentTarget.innerHTML = `<p>${name}</p><p>${symbol}</p>`;
     player.name = name;
     player.symbol = symbol;
 };
@@ -142,9 +142,9 @@ let restart = function () {
     squares.forEach(square => square.innerHTML = "");
     squares.forEach(square => square.addEventListener('click', click));
     init();
-}
+};
 
-let startButton = document.querySelector('.start')
+let startButton = document.querySelector('.start');
 startButton.addEventListener('click', restart);
 
 
