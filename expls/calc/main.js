@@ -4,7 +4,7 @@ const calculator = (function() {
     const display = document.querySelector(".calculator__display");
 
     display.value = 0;
-    display.memory = 1;
+    display.memory = 0;
     display.dot = 0;
     display.operator = null;
 
@@ -17,20 +17,20 @@ const calculator = (function() {
     display.applyOperator = function () {
         switch (display.operator){
             case 'plus':
-                display.memory += display.value;
-                display.value = 0;
+                display.value += display.memory;
+                display.memory = 0;
                 break;
             case 'minus':
-                display.memory -= display.value;
-                display.value = 0;
+                display.value = display.memory - display.value;
+                display.memory = 0;
                 break;
             case 'times':
-                display.memory *= display.value;
-                display.value = 0;
+                display.value *= display.memory;
+                display.memory = 0;
                 break;
             case 'division':
-                display.memory /= display.value;
-                display.value = 0;
+                display.value = display.memory / display.value;
+                display.memory = 0;
                 break;
         }
     };
@@ -49,7 +49,7 @@ const calculator = (function() {
                 display.dot ++;
             }
             display.update();
-            return
+            // return
         }
 
         switch(key) {
@@ -70,23 +70,23 @@ const calculator = (function() {
                 display.operator = null;
                 break;
             case 'plus':
-                display.reset();
                 display.applyOperator();
+                display.reset();
                 display.operator = 'plus';
                 break;
             case 'minus':
-                display.reset();
                 display.applyOperator();
+                display.reset();
                 display.operator = 'minus';
                 break;
             case 'times':
-                display.reset();
                 display.applyOperator();
+                display.reset();
                 display.operator = 'times';
                 break;
             case 'division':
-                display.reset();
                 display.applyOperator();
+                display.reset();
                 display.operator = 'division';
                 break;
             case 'equals':
