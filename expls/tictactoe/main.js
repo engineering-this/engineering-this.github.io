@@ -1,11 +1,11 @@
 // Player constructor
-let Player = function (name, symbol) {
+const Player = function (name, symbol) {
     this.name = name;
     this.symbol = symbol;
 };
 
 // game constructor
-let Game = function () {
+const Game = function () {
     this.rows = 3;
     this.cols = 3;
     this.board = [];
@@ -80,8 +80,8 @@ let Game = function () {
         }
 
         //draw
-        else if (this.round === 9){
-            return this.gameEnd("draw");
+        if (this.round === 9){
+             return this.gameEnd("draw");
         }
 
     };
@@ -94,10 +94,14 @@ let Game = function () {
 
 };
 
-let game, playerX, playerO;
+//create players
+
+let game, playerX, playerO, currentPlayer;
 
 playerX = new Player ("Player 1", "x");
 playerO = new Player ("Player 2", "o");
+
+//initialize game
 
 let init = function (){
     game = new Game();
@@ -106,25 +110,31 @@ let init = function (){
     currentPlayer = playerX;
 };
 
-let currentPlayer;
-
 init();
 
-const squares = Array.from(document.querySelectorAll("td"));
-const playerXBanner = document.querySelector("div.playerX");
-const playerOBanner = document.querySelector("div.playerO");
+//getting dom elements for game
 
+const squares = Array.from(document.querySelectorAll("td")),
+    playerXBanner = document.querySelector("div.playerX"),
+    playerOBanner = document.querySelector("div.playerO"),
+    startButton = document.querySelector('.start');
+
+
+//change player name and symbol
 
 let playerBanner = function (e, player) {
     let name = prompt("Przedstaw się!");
     let symbol = prompt("Jaki jest twój znacznik?");
+    if (player === playerX && symbol === playerO.symbol || player === playerO && symbol === playerX.symbol){
+        alert("Musisz wybrać inny znak niż twój rywal");
+        return playerBanner(e, player);
+    }
     e.currentTarget.innerHTML = `<p>${name}</p><p>${symbol}</p>`;
     player.name = name;
     player.symbol = symbol;
 };
 
-
-
+//click on board function
 
 let click = function (e){
     game.playerMove(currentPlayer, e.target.dataset.row, e.target.dataset.col);
@@ -138,15 +148,17 @@ let click = function (e){
     this.removeEventListener('click', click)
 };
 
+//new game function
+
 let restart = function () {
     squares.forEach(square => square.innerHTML = "");
     squares.forEach(square => square.addEventListener('click', click));
     init();
 };
 
-let startButton = document.querySelector('.start');
-startButton.addEventListener('click', restart);
+//adding event listeners
 
+startButton.addEventListener('click', restart);
 
 squares.forEach(square => square.addEventListener('click', click));
 
