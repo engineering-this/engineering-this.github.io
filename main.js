@@ -11,7 +11,6 @@
     if (isChrome) {
         mixBlends.forEach(function (obj) {
             obj.style.mixBlendMode = "normal";
-            obj.style.color = "black";
         });
     }
 

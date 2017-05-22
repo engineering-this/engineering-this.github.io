@@ -1,18 +1,26 @@
 
 const calculator = (function() {
 
+    // create display for calculator
+
     const display = document.querySelector(".calculator__display");
+
+    // display helpers
 
     display.value = 0;
     display.memory = 0;
     display.dot = 0;
     display.operator = null;
 
+    // reset display values
+
     display.reset = function () {
         display.memory = display.value;
         display.value = 0;
         display.dot = 0;
     };
+
+    // change display.operator to match clicked operator
 
     display.applyOperator = function () {
         switch (display.operator){
@@ -35,22 +43,39 @@ const calculator = (function() {
         }
     };
 
+    // update display inside html document
+
     display.update = function (){display.innerHTML = display.value};
 
     display.update();
 
+    // function for buttons
+
     const buttonClick = function (e){
         const key = e.target.dataset.key;
+
+        // when pressed is number key
+
         if (!isNaN(key)) {
             if (!display.dot) {
+                // when number is pressed without dot
                 display.value = 10 * display.value + parseInt(key);
             } else {
-                display.value += key / Math.pow(10, display.dot);
+                if (display.value >0) {
+                    // when number is pressed with dot cases for positive and negative ints
+                    display.value += key / Math.pow(10, display.dot);
+                } else {
+                    display.value -= key / Math.pow(10, display.dot);
+                }
                 display.dot ++;
             }
+
+            // update display after pressed numbers
             display.update();
             // return
         }
+
+        // cases for each non number keys
 
         switch(key) {
             case 'dot':
@@ -98,8 +123,11 @@ const calculator = (function() {
                 display.operator = null;
                 display.dot = 0;
         }
+        // update display after aplying operator
         display.update();
     };
+
+    //event listeners for all calculator buttons
 
     const buttons = document.querySelectorAll(".calculator__button");
     for (item of buttons) {
