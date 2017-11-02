@@ -5,14 +5,7 @@
         document.location = "?lang=pl#front";
     }
 
-    let isChrome = !!window.chrome && !!window.chrome.webstore;
-    const mixBlends = document.querySelectorAll(".nav__item");
 
-    if (isChrome) {
-        mixBlends.forEach(function (obj) {
-            obj.style.mixBlendMode = "normal";
-        });
-    }
 
     let getQueryVariable = function (variable){
         let vars = window.location.search.substring(1).split("&");
