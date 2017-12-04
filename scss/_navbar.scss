@@ -12,6 +12,8 @@
 
 // styling nav buttons with transparent text
 .nav__item {
+  mix-blend-mode: multiply;
+  color: white;
   position: relative;
   display: inline-block;
   background-color: black-opacity(0.25);
@@ -23,8 +25,6 @@
   font-family: $base-font;
   line-height: 1.4;
   overflow: hidden;
-  mix-blend-mode: multiply;
-  color: white;
 }
 
 .nav__item--front {
@@ -47,7 +47,6 @@
 .nav__item-span {
   display: block;
   position: relative;
-
 }
 
 .nav__item:before {

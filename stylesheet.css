@@ -92,7 +92,8 @@ html {
   overflow: hidden;
   font-family: "Ubuntu Mono", monospace;
   font-size: 100%;
-  font-weight: 300; }
+  font-weight: 300;
+  background: #FFF; }
 
 body {
   background: #E684AE;
@@ -294,6 +295,8 @@ body {
   height: 80vmin; }
 
 .nav__item {
+  mix-blend-mode: multiply;
+  color: white;
   position: relative;
   display: inline-block;
   background-color: rgba(0, 0, 0, 0.25);
@@ -304,9 +307,7 @@ body {
   font-size: 3.2vmin;
   font-family: "Ubuntu Mono", monospace;
   line-height: 1.4;
-  overflow: hidden;
-  mix-blend-mode: multiply;
-  color: white; }
+  overflow: hidden; }
 
 .nav__item--front {
   border-top-left-radius: 50px; }
