@@ -14,22 +14,17 @@
 .nav__item {
   position: relative;
   display: inline-block;
-  color: black;
   background-color: black-opacity(0.25);
   padding: 10px;
   text-align: center;
   margin-bottom: 8px;
-  //text-transform: uppercase;
   text-decoration: none;
   font-size: $nav__font-size;
   font-family: $base-font;
   line-height: 1.4;
   overflow: hidden;
-  @supports(mix-blend-mode: multiply){
-    mix-blend-mode: multiply;
-    color: white;
-  }
-
+  mix-blend-mode: multiply;
+  color: white;
 }
 
 .nav__item--front {
@@ -46,13 +41,14 @@
 
 .nav__item {
   cursor: pointer;
+
 }
 
 .nav__item-span {
   display: block;
   position: relative;
-}
 
+}
 
 .nav__item:before {
   content: "";
